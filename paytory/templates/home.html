@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+{% if user.is_authenticated %}
+<form action="{% url 'logout' %}" method="post">
+{% csrf_token %}
+<button type="submit">Log out</button>
+</form>
+You're logged in!
+<p><a href="{% url 'password_change' %}">Change password</a></p>
+{% else %}
+<p>Welcome to Paytory! In Paytory, you can put your pay history. Getting money or paying. Even, you can earn score and share it with anyone. </p>
+<p>In Paytory, you need to log in. You can test the app. But, if you want to use it and earn score, You need to <a href="{% url 'login' %}">log in</a> or <a href="{% url 'signup' %}">sign up</a>!</p>
+{% endif %}
+{% endblock %}
