@@ -16,11 +16,21 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from paytory.views import submit_expense, submit_income, disable_developer, dev_options, confirm_developer, generate_token, manage_tokens, revoke_token, reset_score
 from django.views.generic.base import TemplateView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('submit/expense/', submit_expense),
+    path('submit/income/', submit_income),
     path('accounts/', include("django.contrib.auth.urls")),
     path('accounts/', include("accounts.urls")),
     path("", include('paytory.urls')),
+    path('devoptions/', dev_options, name='devoptions'),
+    path('devoptions_enable', confirm_developer, name='devoptions_enable'),
+    path('devoptions_disable/', disable_developer, name='disable_developer'),
+    path('tokens/generate/', generate_token, name='generate_token'),
+    path('tokens/manage/', manage_tokens, name='manage_tokens'),
+    path('tokens/revoke/<int:token_id>/', revoke_token, name='revoke_token'),
+    path('reset_score/', reset_score, name='reset_score'),
 ]

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Paytory Developer Options</title>
+</head>
+<body>
+  {% if is_developer %}
+      <h1>Paytory Developer Options</h1>
+      <p>Welcome to Paytory Developer Options. In Paytory Developer Options, you can access tokens and many things.</p>
+      <h2>Developer Options</h2>
+      <ul>
+          <li><a href="{% url 'generate_token' %}">Generate Token</a></li>
+          <li><a href="{% url 'manage_tokens' %}">Manage Tokens</a></li>
+          <li><a href="{% url 'disable_developer' %}" onclick="return confirm('Are you sure you want to disable developer options?')">Disable Developer Options</a></li>
+      </ul>
+  {% else %}
+    <p>Please go to <a href="{% url 'devoptions_enable' %}">Developer Options enable</a> to access to this page. </p>
+  {% endif %}
+</body>
+</html>

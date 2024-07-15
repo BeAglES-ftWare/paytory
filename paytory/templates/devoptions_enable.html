@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h3>NOTE: THIS IS FOR DEVELOPERS ONLY! DON'T ENABLE IT UNLESS YOU KNOW WHAT YOU ARE DOING!</h3>
+    <p>By clicking on Accept, you confirm that you are a developer and access dangerous options.</p>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit">Accept</button>
+    </form>
+  </body>
+</html>

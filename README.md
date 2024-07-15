@@ -27,4 +27,3 @@ Open ```127.0.0.1:5000``` in your browser and log in.
 - [x] Creating UI
 - [x] Put styles with CSS
 - [x] Publish it
-- [ ] Publish it in GitHub Pages.

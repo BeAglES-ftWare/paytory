@@ -8,11 +8,9 @@
       font-family: "sans-serif", Arial;
       background-color: #e8ffee;
   }
-
   h1 {
     background-color: #e0ffe9;
   }
-
   .form-container {
       margin-bottom: 20px;
       padding: 10px;
@@ -20,19 +18,16 @@
       border: 1px solid #ccc;
       border-radius: 5px;
   }
-
   table {
       width: 100%;
       border-collapse: collapse;
       margin-bottom: 40px;
   }
-
   th, td {
       padding: 8px;
       text-align: left;
       border-bottom: 1px solid #ddd;
   }
-
   .logout-button {
       height: 100%;
       display: flex;
@@ -62,7 +57,7 @@
         <td>{{ expense.date|date:"Y-m-d" }}</td>
         <td>{{ expense.date|time:"H:i:s" }}</td>
         <td>{{ expense.amount }}</td>
-        <td><a href="{% url 'delete_expense' expense.id %}" onclick="return confirm('Are you sure you want to delete this expense?');">Delete</a></td>
+        <td><a href="{% url 'delete_expense' expense.id %}" onclick="return confirm('Are you sure you want to delete this expense? It will removes the score by 10!');">Delete</a></td>
     </tr>
     {% endfor %}
 </table>
@@ -105,6 +100,7 @@
         <button type="submit">Log out</button>
     </div>
 </form>
+<a href="{% url 'devoptions' %}">Developer Options</a>
 <p><a href="{% url 'password_change' %}">Change password</a></p>
 {% else %}
 <p>Welcome to Paytory! In Paytory, you can put your pay history. Expense and income. Even, you can earn score and share it with anyone. (Coming soon) </p>
