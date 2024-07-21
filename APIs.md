@@ -15,8 +15,6 @@ Write the command below:
 ```
 curl --data "token=<your_token>&amount=<amount>&text=<title: what you do. etc: Buying hamburger>" http://127.0.0.1:8000/submit/<expense | income>/
 ```
-> [!NOTE]
-> If you're using online, You need to get token. Follow these steps in TOKEN.md
 ## APIs
 /submit/expense/
   POST, returns a JSON.
