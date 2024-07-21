@@ -11,12 +11,9 @@ python manage.py createsuperuser
 ```
 and follow instructions
 
-Next, Go to Django admin at 127.0.0.1:<port>/admin and login with it.
-
-Go to token and put a token. (Not generating)
-### Online
-Go to https://maarasteh.github.io/django-online/token/generate and it gives you a token
+Next, Go to Django admin at 127.0.0.1:<port>/devoptions and go to `Generate Token`.
+It gives you a token. You can use it in APIa.
 > [!WARNING]
 > Save it somewhere! You won't see it again.
 
-You can use token in API. SEE APIs.md. 
+You can use token in API. SEE [APIs.md](https://github.com/MaArasteh/paytory/blob/master/APIs.md). 
