@@ -113,7 +113,7 @@ def delete_income(request, id):
 def confirm_developer(request):
     if request.method == "POST":
         request.session['is_developer'] = True
-        return redirect('devoptions.html')
+        return redirect('devoptions')
     return render(request, 'devoptions_enable.html')
 
 @login_required
